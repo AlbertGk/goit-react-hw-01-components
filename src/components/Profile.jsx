@@ -1,30 +1,40 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileContainer,
+  TopSection,
+  ImgAvatar,
+  MainParagraph,
+  SideParagraph,
+  BottomSection,
+  LiElem,
+  SpanLabel,
+} from 'Styles/Profile.styles';
 
 export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <ProfileContainer class="profile">
+      <TopSection class="description">
+        <ImgAvatar src={avatar} alt="User avatar" class="avatar" />
+        <MainParagraph class="name">{username}</MainParagraph>
+        <SideParagraph class="tag">@{tag}</SideParagraph>
+        <SideParagraph class="location">{location}</SideParagraph>
+      </TopSection>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
+      <BottomSection class="stats">
+        <LiElem>
+          <SpanLabel class="label">Followers</SpanLabel>
           <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
+        </LiElem>
+        <LiElem>
+          <SpanLabel class="label">Views</SpanLabel>
           <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
+        </LiElem>
+        <LiElem>
+          <SpanLabel class="label">Likes</SpanLabel>
           <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        </LiElem>
+      </BottomSection>
+    </ProfileContainer>
   );
 };
 
