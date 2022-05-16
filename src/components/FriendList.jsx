@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import {} from 'Styles/FriendList.styles';
+
 export const FriendList = ({ friends }) => {
   return (
     <ul class="friend-list">

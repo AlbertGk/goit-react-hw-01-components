@@ -8,4 +8,5 @@ export const PageContainer = styled.div`
   background-color: #f7f7f7;
 
   padding-top: 20px;
+  padding-bottom: 50px;
 `;
