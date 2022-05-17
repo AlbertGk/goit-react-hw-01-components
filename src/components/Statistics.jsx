@@ -11,14 +11,14 @@ import {
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <StatisticsContainer class="statistics">
-      {title && <Tittle class={title}>Upload stats</Tittle>}
+    <StatisticsContainer className="statistics">
+      {title && <Tittle className={title}>Upload stats</Tittle>}
 
-      <BottomSection class="stat-list">
+      <BottomSection className="stat-list">
         {stats.map(stat => (
-          <LiElem color={getRandomHexColor()} key={stat.id} class="item">
-            <SpanLabel class="label">{stat.label}</SpanLabel>
-            <span class="percentage">{stat.percentage}</span>
+          <LiElem color={getRandomHexColor()} key={stat.id} className="item">
+            <SpanLabel className="label">{stat.label}</SpanLabel>
+            <span className="percentage">{stat.percentage}</span>
           </LiElem>
         ))}
       </BottomSection>

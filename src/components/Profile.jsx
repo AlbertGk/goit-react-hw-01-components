@@ -12,26 +12,26 @@ import {
 
 export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
-    <ProfileContainer class="profile">
-      <TopSection class="description">
-        <ImgAvatar src={avatar} alt="User avatar" class="avatar" />
-        <MainParagraph class="name">{username}</MainParagraph>
-        <SideParagraph class="tag">@{tag}</SideParagraph>
-        <SideParagraph class="location">{location}</SideParagraph>
+    <ProfileContainer className="profile">
+      <TopSection className="description">
+        <ImgAvatar src={avatar} alt="User avatar" className="avatar" />
+        <MainParagraph className="name">{username}</MainParagraph>
+        <SideParagraph className="tag">@{tag}</SideParagraph>
+        <SideParagraph className="location">{location}</SideParagraph>
       </TopSection>
 
-      <BottomSection class="stats">
+      <BottomSection className="stats">
         <LiElem>
-          <SpanLabel class="label">Followers</SpanLabel>
-          <span class="quantity">{stats.followers}</span>
+          <SpanLabel className="label">Followers</SpanLabel>
+          <span className="quantity">{stats.followers}</span>
         </LiElem>
         <LiElem>
-          <SpanLabel class="label">Views</SpanLabel>
-          <span class="quantity">{stats.views}</span>
+          <SpanLabel className="label">Views</SpanLabel>
+          <span className="quantity">{stats.views}</span>
         </LiElem>
         <LiElem>
-          <SpanLabel class="label">Likes</SpanLabel>
-          <span class="quantity">{stats.likes}</span>
+          <SpanLabel className="label">Likes</SpanLabel>
+          <span className="quantity">{stats.likes}</span>
         </LiElem>
       </BottomSection>
     </ProfileContainer>

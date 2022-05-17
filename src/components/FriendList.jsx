@@ -10,19 +10,19 @@ import {
 
 export const FriendList = ({ friends }) => {
   return (
-    <StyledFriendList class="friend-list">
+    <StyledFriendList className="friend-list">
       {friends.map(({ id, isOnline, avatar, name}) => (
-        <FriendListElem key={id} class="item">
-          <SpanStatus isOnline={isOnline} class="status">
+        <FriendListElem key={id} className="item">
+          <SpanStatus isOnline={isOnline} className="status">
             {isOnline}
           </SpanStatus>
           <FriendPicture
-            class="avatar"
+            className="avatar"
             src={avatar}
             alt="User avatar"
             width="48"
           />
-          <FriendName class="name">{name}</FriendName>
+          <FriendName className="name">{name}</FriendName>
         </FriendListElem>
       ))}
     </StyledFriendList>
