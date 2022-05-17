@@ -25,10 +25,14 @@ font-size: 20px;
 margin: 0;
 `;
 
+export const FriendPicture = styled.img`
+  padding-left: 25px;
+`;
+
 
 export const SpanStatus = styled.span`
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 
   background-color: ${({isOnline}) => (isOnline ? 'green' : 'red')};

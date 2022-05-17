@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomHexColor } from '../utils/colorChanger'
 
 import {
   StatisticsContainer,
@@ -15,7 +16,7 @@ export const Statistics = ({ title, stats }) => {
 
       <BottomSection class="stat-list">
         {stats.map(stat => (
-          <LiElem key={stat.id} class="item">
+          <LiElem color={getRandomHexColor()} key={stat.id} class="item">
             <SpanLabel class="label">{stat.label}</SpanLabel>
             <span class="percentage">{stat.percentage}</span>
           </LiElem>

@@ -33,6 +33,8 @@ export const LiElem = styled.li`
   flex-direction: column;
   padding: 15px;
   align-items: center;
+
+  background-color: ${({ color }) => (color)};
 `;
 
 export const SpanLabel = styled.span`

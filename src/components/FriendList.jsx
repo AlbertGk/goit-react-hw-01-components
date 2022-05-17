@@ -5,21 +5,24 @@ import {
   FriendListElem,
   SpanStatus,
   FriendName,
+  FriendPicture,
 } from 'Styles/FriendList.styles';
 
 export const FriendList = ({ friends }) => {
   return (
     <StyledFriendList class="friend-list">
-      {friends.map(friend => (
-        <FriendListElem key={friend.id} class="item">
-          <SpanStatus class="status">{friend.isOnline}</SpanStatus>
-          <img
+      {friends.map(({ id, isOnline, avatar, name}) => (
+        <FriendListElem key={id} class="item">
+          <SpanStatus isOnline={isOnline} class="status">
+            {isOnline}
+          </SpanStatus>
+          <FriendPicture
             class="avatar"
-            src={friend.avatar}
+            src={avatar}
             alt="User avatar"
             width="48"
           />
-          <FriendName class="name">{friend.name}</FriendName>
+          <FriendName class="name">{name}</FriendName>
         </FriendListElem>
       ))}
     </StyledFriendList>
